@@ -1,9 +1,9 @@
 package viewVerktyg;
 
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 
 public class QuestionCreator {
@@ -15,7 +15,8 @@ public class QuestionCreator {
 
 			@Override
 			public void handle(ActionEvent event) {
-				// TODO Auto-generated method stub
+				TextField txtOption= new TextField();
+				RadioButton radCorr = new RadioButton();
 				
 			}
 		});
