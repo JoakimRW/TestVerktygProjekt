@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
@@ -21,6 +22,7 @@ public class ClientView {
 	private AnchorPane bottomBtnPane;
 	private AnchorPane topPane;
 	private VBox centerLayout;
+	private HBox topHbox;
 
 	private Button btnNext = new Button("Nästa");
 	private Button btnPrev = new Button("Tillbaka");
@@ -28,34 +30,41 @@ public class ClientView {
 
 	private Label lblTitle;
 	private Label lblDescript;
+	private Label lblTimer;
 
 	// Constructor
 	public ClientView(){
 		initComponents();
-
 	}
 
 	// Methods
 	private void initComponents(){
+		//Labels
 		lblTitle = new Label("Starta test");
 		lblTitle.setFont(Font.font(32));
 		lblDescript = new Label("Starta testet genom att trycka på Nästa..");
 		lblDescript.setFont(Font.font(16));
+		lblTimer = new Label("00:00");
+		lblTimer.setFont(Font.font(16));
 
+		//Layouts
+		topHbox = new HBox(lblTimer, btnSend);
+		topHbox.setSpacing(14);
+		topPane = new AnchorPane(topHbox);
+		topPane.setRightAnchor(topHbox, 0.0);
+		centerLayout  = new VBox();
+		centerLayout.setPadding(new Insets(30));
+		centerLayout.getChildren().addAll(lblTitle, lblDescript);
 		bottomBtnPane = new AnchorPane(btnPrev,btnNext);
 		bottomBtnPane.setLeftAnchor(btnPrev, 0.0);
 		bottomBtnPane.setRightAnchor(btnNext, 0.0); 
 		bottomBtnPane.setMaxHeight(100);
+
 		btnPrev.setPrefSize(100, 50);
 		btnNext.setPrefSize(100, 50);
 
+		// Main layout
 		layout = new BorderPane();
-		centerLayout  = new VBox();
-		topPane = new AnchorPane(btnSend);
-		topPane.setRightAnchor(btnSend, 0.0);
-		centerLayout.setPadding(new Insets(30));
-		centerLayout.getChildren().addAll(lblTitle, lblDescript);
-
 		layout.setTop(topPane);
 		layout.setCenter(centerLayout);
 		layout.setBottom(bottomBtnPane);
@@ -63,13 +72,10 @@ public class ClientView {
 		testView = new Scene(layout, 500,600);
 	}
 
-	//Methods
-
 	// Getters and setters
 	public Scene getTestView(){
 		return testView;
 	}
-
 
 	public Button getBtnNext(){
 		return btnNext;
@@ -91,6 +97,9 @@ public class ClientView {
 		this.lblDescript = lblDescript;
 	}
 
+	public Label getLblTimer() {
+		return lblTimer;
+	}
 
 
 }
