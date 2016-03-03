@@ -17,7 +17,7 @@ public class QuestionCreator {
 	private ArrayList<RadioButton> ansCorr;
 	private VBox questionList; 
 	
-	public VBox startQuestionCreator(){
+	public void startQuestionCreator(){
 		title= new Button();
 		save= new Button();
 		txtQuestion= new TextField();
@@ -25,7 +25,6 @@ public class QuestionCreator {
 		questionList = new VBox();
 		questionList.getChildren().addAll(title,save,txtQuestion,addOption);
 		questionList.setPrefSize(400, 800);
-		return questionList;
 	}
 	
 	public VBox getQuestionList(){
