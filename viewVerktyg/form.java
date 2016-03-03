@@ -3,18 +3,12 @@ package viewVerktyg;
 import java.util.ArrayList;
 
 public class Form {
-	private String query,answer;
+	private String query;
 	private ArrayList<String> options;
 	private int corrAns;
 	
 	public Form(){
 		
-	}
-	public String getAnswer() {
-		return answer;
-	}
-	public void setAnswer(String answer) {
-		this.answer = answer;
 	}
 	public String getQuery() {
 		return query;
