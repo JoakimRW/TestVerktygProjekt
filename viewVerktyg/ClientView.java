@@ -17,7 +17,6 @@ import javafx.scene.text.Font;
 public class ClientView {
 	// Instance variables
 	private Scene testView; // Scene showing test
-	private Scene selectionView; // Scene showing selection of tests
 	private BorderPane layout;
 	private AnchorPane bottomBtnPane;
 	private AnchorPane topPane;
@@ -29,7 +28,6 @@ public class ClientView {
 
 	private Label lblTitle;
 	private Label lblDescript;
-
 
 	// Constructor
 	public ClientView(){
@@ -46,11 +44,10 @@ public class ClientView {
 
 		bottomBtnPane = new AnchorPane(btnPrev,btnNext);
 		bottomBtnPane.setLeftAnchor(btnPrev, 0.0);
-		bottomBtnPane.setRightAnchor(btnNext, 0.0);
+		bottomBtnPane.setRightAnchor(btnNext, 0.0); 
 		bottomBtnPane.setMaxHeight(100);
 		btnPrev.setPrefSize(100, 50);
 		btnNext.setPrefSize(100, 50);
-
 
 		layout = new BorderPane();
 		centerLayout  = new VBox();
@@ -66,15 +63,13 @@ public class ClientView {
 		testView = new Scene(layout, 500,600);
 	}
 
+	//Methods
 
 	// Getters and setters
 	public Scene getTestView(){
 		return testView;
 	}
 
-	public Scene getSelectionView(){
-		return selectionView;
-	}
 
 	public Button getBtnNext(){
 		return btnNext;
@@ -95,5 +90,7 @@ public class ClientView {
 	public void setLblDescript(Label lblDescript) {
 		this.lblDescript = lblDescript;
 	}
+
+
 
 }
