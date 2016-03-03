@@ -24,7 +24,7 @@ public class ClientView {
 	private AnchorPane topPane;
 	private VBox centerLayout;
 	private HBox hBox;
-
+			
 	private Button btnNext = new Button("Nästa");
 	private Button btnPrev = new Button("Tillbaka");
 	private Button btnSend = new Button("Lämna in");
@@ -41,6 +41,7 @@ public class ClientView {
 
 	// Methods
 	private void initComponents(){
+		
 		lblTitle = new Label("Starta test");
 		lblTitle.setFont(Font.font(32));
 		lblDescript = new Label("Starta testet genom att trycka på Nästa..");
@@ -52,19 +53,19 @@ public class ClientView {
 		bottomBtnPane.setMaxHeight(100);
 		btnPrev.setPrefSize(100, 50);
 		btnNext.setPrefSize(100, 50);
-
+				
 		layout = new BorderPane();
 		centerLayout  = new VBox();
 		topPane = new AnchorPane(btnSend);
 		topPane.setRightAnchor(btnSend, 0.0);
 		centerLayout.setPadding(new Insets(30));
 		centerLayout.getChildren().addAll(lblTitle, lblDescript);
-
+		
 		layout.setTop(topPane);
 		layout.setCenter(centerLayout);
 		layout.setBottom(bottomBtnPane);
 
-		testView = new Scene(layout, 500,600);
+		testView = new Scene(layout, 500,600);		
 	}
 
 

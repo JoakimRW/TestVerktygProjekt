@@ -17,21 +17,19 @@ public class QuestionCreator {
 	private ArrayList<RadioButton> ansCorr;
 	private VBox questionList; 
 	
+	public QuestionCreator(){
+		startQuestionCreator();
+	}
+	
 	public void startQuestionCreator(){
-		title= new Button();
-		save= new Button();
+		title= new Button("Title");
+		save= new Button("Save");
 		txtQuestion= new TextField();
-		addOption= new Button();
+		addOption= new Button("+");
 		questionList = new VBox();
 		questionList.getChildren().addAll(title,save,txtQuestion,addOption);
 		questionList.setPrefSize(400, 800);
-	}
-	
-	public VBox getQuestionList(){
-		return questionList;
-	}
-	
-	public void generateOptionField (){
+		
 		addOption.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -44,6 +42,11 @@ public class QuestionCreator {
 			}
 		});
 	}
+	
+	public VBox getQuestionList(){
+		return questionList;
+	}
+	
 	public void saveQuestion(){
 		save.setOnAction(new EventHandler<ActionEvent>() {
 
