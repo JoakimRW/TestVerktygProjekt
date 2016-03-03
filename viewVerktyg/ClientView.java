@@ -6,7 +6,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
@@ -23,7 +22,6 @@ public class ClientView {
 	private AnchorPane bottomBtnPane;
 	private AnchorPane topPane;
 	private VBox centerLayout;
-	private HBox hBox;
 
 	private Button btnNext = new Button("Nästa");
 	private Button btnPrev = new Button("Tillbaka");
@@ -52,6 +50,7 @@ public class ClientView {
 		bottomBtnPane.setMaxHeight(100);
 		btnPrev.setPrefSize(100, 50);
 		btnNext.setPrefSize(100, 50);
+
 
 		layout = new BorderPane();
 		centerLayout  = new VBox();
