@@ -7,8 +7,16 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 
 public class QuestionCreator {
-	Button title, save, addOption;
-	TextField txtQuestion;
+	private Button title, save, addOption;
+	private TextField txtQuestion;
+	
+	
+	public void startQuestionCreator(){
+		title= new Button();
+		save= new Button();
+		txtQuestion= new TextField();
+		
+	}
 	
 	public void generateOptionField (){
 		addOption.setOnAction(new EventHandler<ActionEvent>() {
