@@ -22,13 +22,9 @@ public class ClientView {
 	private AnchorPane bottomBtnPane;
 	private AnchorPane topPane;
 	private VBox centerLayout;
-<<<<<<< HEAD
 	private HBox topHbox;
 
-=======
-	private HBox hBox;
-			
->>>>>>> origin/master
+
 	private Button btnNext = new Button("Nästa");
 	private Button btnPrev = new Button("Tillbaka");
 	private Button btnSend = new Button("Lämna in");
@@ -44,11 +40,8 @@ public class ClientView {
 
 	// Methods
 	private void initComponents(){
-<<<<<<< HEAD
+
 		//Labels
-=======
-		
->>>>>>> origin/master
 		lblTitle = new Label("Starta test");
 		lblTitle.setFont(Font.font(32));
 		lblDescript = new Label("Starta testet genom att trycka på Nästa..");
@@ -71,11 +64,9 @@ public class ClientView {
 
 		btnPrev.setPrefSize(100, 50);
 		btnNext.setPrefSize(100, 50);
-<<<<<<< HEAD
 
 		// Main layout
 		layout = new BorderPane();
-=======
 				
 		layout = new BorderPane();
 		centerLayout  = new VBox();
@@ -84,7 +75,7 @@ public class ClientView {
 		centerLayout.setPadding(new Insets(30));
 		centerLayout.getChildren().addAll(lblTitle, lblDescript);
 		
->>>>>>> origin/master
+
 		layout.setTop(topPane);
 		layout.setCenter(centerLayout);
 		layout.setBottom(bottomBtnPane);
