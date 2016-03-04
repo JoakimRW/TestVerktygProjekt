@@ -14,7 +14,7 @@ import javafx.scene.text.Font;
  * @author Liz Dahlstrom
  *
  */
-
+llll
 public class ClientView {
 	// Instance variables
 	private Scene testView; // Scene showing test
