@@ -25,10 +25,10 @@ public class ClientView {
 	private HBox topHbox;
 
 
-	private Button btnNext = new Button("Nästa");
+	private Button btnNext = new Button("Nï¿½sta");
 	private Button btnPrev = new Button("Tillbaka");
-	private Button btnSend = new Button("Lämna in");
-
+	private Button btnSend = new Button("Lï¿½mna in");
+	jhkj
 	private Label lblTitle;
 	private Label lblDescript;
 	private Label lblTimer;
@@ -44,7 +44,7 @@ public class ClientView {
 		//Labels
 		lblTitle = new Label("Starta test");
 		lblTitle.setFont(Font.font(32));
-		lblDescript = new Label("Starta testet genom att trycka på Nästa..");
+		lblDescript = new Label("Starta testet genom att trycka pï¿½ Nï¿½sta..");
 		lblDescript.setFont(Font.font(16));
 		lblTimer = new Label("00:00");
 		lblTimer.setFont(Font.font(16));
