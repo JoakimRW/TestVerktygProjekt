@@ -28,7 +28,7 @@ public class ClientView {
 	private Button btnNext = new Button("N�sta");
 	private Button btnPrev = new Button("Tillbaka");
 	private Button btnSend = new Button("L�mna in");
-	jhkj
+
 	private Label lblTitle;
 	private Label lblDescript;
 	private Label lblTimer;
